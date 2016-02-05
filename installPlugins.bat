@@ -1,1 +1,1 @@
-cordova plugin add cordova-plugin-device & https://www.npmjs.com/package/cordova-plugin-splashscreen & https://www.npmjs.com/package/cordova-plugin-inappbrowser
+cordova plugin add cordova-plugin-device & cordova plugin add cordova-plugin-splashscreen & cordova plugin add cordova-plugin-inappbrowser & cordova plugin add cordova-plugin-appavailability
