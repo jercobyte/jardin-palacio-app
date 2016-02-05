@@ -1,0 +1,1 @@
+cordova plugin add cordova-plugin-device & https://www.npmjs.com/package/cordova-plugin-splashscreen & https://www.npmjs.com/package/cordova-plugin-inappbrowser

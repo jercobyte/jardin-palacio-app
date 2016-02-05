@@ -1,0 +1,18 @@
+{{#if posts}}
+
+	{{#each posts}}
+		<div class="noticia">
+			<div class="tituloNoticia">
+				{{{title}}}
+			</div>
+			<div class="contenidoNoticia">
+				{{{content}}}
+			</div>
+		</div>
+	{{/each}}
+
+{{else}}
+	<div>
+		<div class="frame" style="text-align: center;"><i class="fa fa-info-circle fa-3x"></i><br>No hay contenido disponible aún.</div>
+	</div>
+{{/if}}

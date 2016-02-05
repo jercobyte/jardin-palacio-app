@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jardín Palacio</title>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/handlebars112.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/other.js"></script>
+        <script src="js/services.js"></script>
+        <!-- <script type="text/javascript" src="js/fastclick.js"></script> -->
+        <link rel="stylesheet" type="text/css" href="css/board.css" />
+        <link rel="stylesheet" type="text/css" href="css/bar.css" />
+        <link rel="stylesheet" type="text/css" href="css/elements.css" />
+        <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css" />
+    </head>
+    <body class="platform-android platform-cordova platform-webview">
+        <script>
+            main.startApp();
+            main.setComputerPlatform();
+        </script>
+        <!-- CONTENIDO BAMBU -->
+        <bar id="bambubar" status="show">
+            <tab name="photos2" >
+                <!-- url="http://bambúandvendetta.com/index.php?callback=json&api_key=true&format=json&method=gallery&id=1"> -->
+                <i class="fa fa-camera"></i>
+                <span>Fotos</span>
+            </tab><tab name="events2" title="Eventos"> <!-- url="http://bambúandvendetta.com/category/eventos-bambu/?json=1" title="Eventos"> -->
+                <i class="fa fa-calendar"></i>
+                <span>Eventos</span>
+            </tab><tab name="inicio2" status="active">
+                <!-- <i class="fa fa-home"></i> -->
+                <!-- <span>Inicio</span> -->
+                <img class="loguito" id="loguito" src="res/jardinloguito2.png">
+            </tab><tab name="map2">
+                <i class="fa fa-map-marker"></i>
+                <span>Ubicación</span>
+            </tab>
+        </bar>
+        <board name="inicio2" status="show" firstboard='true'>
+            <content>
+                <div class="logo">
+                    <img src="res/jardinlogo.png">
+                </div>
+                <div class="socialbar">
+                    <a href="https://www.facebook.com/jardinpalacio"><div class="socialbutton"><img src="res/facebook.png"></div></a>
+                    <a href="https://instagram.com/jardinpalacio/"><div class="socialbutton"><img src="res/instagram.png"></div></a>
+                    <a href="https://twitter.com/jardin_palacio"><div class="socialbutton"><img src="res/twitter.png"></div></a>
+                </div>
+            </content>
+        </board>
+        <board name="photos2" status="hide">
+            <headbar>
+                <div class="titulo">Fotos</div>
+            </headbar>
+            <content>
+                <div><div class="frame" style="text-align: center;"><i class="fa fa-info-circle fa-3x"></i><br>No hay contenido disponible aún.</div></div>
+                <!-- <div class="frame" style="text-align: center;">
+                    <img width="100%" src="res/loading.gif">
+                </div> -->
+            </content>
+        </board>
+        <board name="events2" status="hide">
+            <headbar>
+                <div class="titulo">Eventos</div>
+            </headbar>
+            <content>
+                <div><div class="frame" style="text-align: center;"><i class="fa fa-info-circle fa-3x"></i><br>No hay contenido disponible aún.</div></div>
+                <!-- <div class="frame" style="text-align: center;">
+                    <img width="100%" src="res/loading.gif">
+                </div> -->
+            </content>
+        </board>
+        <board name="map2" status="hide">
+            <headbar>
+                <div class="titulo">Ubicación</div>
+            </headbar>
+            <content>
+                <div class="frame" style="background-color: black; color: white;">
+                    <div style="text-align: center;">
+                        <b>Jardín Palacio Estepa</b><br>
+                        <img class="mapa" src="res/mapavendetta.png"><br>
+                        Ven a visitarnos en Calle Ajonjolí, 9 <br>
+                        41560 <br>
+                        Estepa (Sevilla)<br>
+                        <div class="boton" style="margin-top: 5%; width: 60%;" function="mapbambu">
+                            <img class="minipin" src="res/location-icon.png">
+                            Llévame
+                        </div>
+                    </div>
+                </div>
+            </content>
+        </board>
+    </body>
+</html>
