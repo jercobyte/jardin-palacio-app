@@ -102,6 +102,39 @@ var main = {
                     main.createContent(focus.getAttribute("name"),focus.getAttribute("title"),url);
                 }
                 end = true;
+            }else if (focus.nodeName == "SOCIAL"){
+                if(focus.getAttribute("id")=="fb"){
+                    appAvailability.check(
+                        'com.facebook.katana',
+                        function(){
+                            window.open('fb://page/597023517103137', '_system', 'location=no');
+                        },
+                        function(){
+                            window.open('https://www.facebook.com/jardinpalacio', '_system');
+                        }
+                    );
+                }else if(focus.getAttribute("id")=="in"){
+                    appAvailability.check(
+                        'com.instagram.android',
+                        function(){
+                            window.open('instagram://user?username=jardinpalacio', '_system', 'location=no');
+                        },
+                        function(){
+                            window.open('https://instagram.com/jardinpalacio/', '_system');
+                        }
+                    );
+                }else{
+                    appAvailability.check(
+                        'com.twitter.android',
+                        function(){
+                            window.open('twitter://user?screen_name=jardin_palacio', '_system', 'location=no');
+                        },
+                        function(){
+                            window.open('https://twitter.com/jardin_palacio', '_system');
+                        }
+                    );
+                }
+                end = true;
             }else{
                 focus = focus.parentNode;
             }
