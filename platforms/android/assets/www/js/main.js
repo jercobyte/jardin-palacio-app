@@ -27,6 +27,19 @@ var main = {
 	    main.setPhonePlatform();
 	},
 
+    testConnection: function() {
+        var z, xhr = null;
+        xhr = new XMLHttpRequest();
+        xhr.open("GET","http://xn--jardnpalacio-vfb.com/?page_id=11",false);
+        try{
+            xhr.send(null);
+        } catch(z) {
+            document.querySelector("#photosframe").innerHTML="<div><div class=\"frame\" style=\"text-align: center;\"><i class=\"fa fa-info-circle fa-3x\"></i><br>No hay conexión.</div></div>";
+            document.querySelector("#eventsframe").innerHTML="<div><div class=\"frame\" style=\"text-align: center;\"><i class=\"fa fa-info-circle fa-3x\"></i><br>No hay conexión.</div></div>";
+        }
+            
+    },
+
 	 setComputerPlatform: function() {
 	 	var body = document.querySelector("body");
 	 	var navegador = navigator.userAgent.toLowerCase();
